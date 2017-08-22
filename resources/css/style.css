@@ -1,0 +1,320 @@
+html {
+	
+	font-family: 'Alegreya Sans', sans-serif;
+
+	font-size: 24px;
+	color: #404040
+}
+.container {
+	display: flex;
+	flex-direction: column;
+}
+/* Header */
+
+header {
+	display: flex;
+	align-items: center;
+	height: 2.5rem;
+	padding: 0 1rem;
+	background-color: WhiteSmoke;
+}
+.logo {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	font-family: 'Cabin Condensed', sans-serif;
+	
+}
+.logo img {
+	height: 2rem; /* 32px looks too small compared to wireframe */
+	padding-top: 0.5rem;
+}
+.colmar {
+	color: #404040;
+	font-weight: 700;
+}
+.academy {
+	color: LightSlateGray;
+}
+nav {
+	list-style: none;
+}
+nav.desktop {
+	justify-content: flex-end;
+}
+nav.desktop li {
+	display: inline-block;
+	
+}
+nav.desktop li a {
+	text-decoration: none;
+	color: #404040;
+	padding: .33rem;
+	border: 2px solid WhiteSmoke;
+	border-radius: 6px;
+}
+nav.desktop li a:hover {
+	color: 	WhiteSmoke;
+	background-color: #404040;
+}
+nav.mobile {
+	justify-content: center;
+}
+nav.mobile li {
+	display: inline-block;
+}
+
+@media only screen and (max-width:501px) {
+	nav.desktop {
+		display: none;
+	}
+	.logo {
+		display: none;
+	}
+}
+@media only screen and (min-width:500px) {
+nav.mobile {
+		display: none;
+	}
+}
+/* Banner */
+.banner {
+	background-color: Silver;
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+}
+.banner-photo {
+	padding: 1.5rem 1rem;
+	width: 60%;
+	display: block;
+}
+
+.banner-photo img {
+	width: 100%;
+	height: auto;
+}
+.banner .start {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+}
+.start h1 {
+	font-size: 2rem;
+	width: 90%;
+}
+.start h3 {
+	font-size: 1rem;
+	width: 90%;
+}
+.btn {
+	width: 75%;
+	font-size: 1rem;
+	background-color: #404040;
+	border: 4px solid #404040;
+	color: Silver;
+	display: inline-block;
+	justify-content: center;
+	line-height: 2.5;
+	transition: color .1s linear .1s;
+	border-radius: 8px;
+}
+.btn span {
+	display: flex;
+	justify-content: center;
+}
+.btn:hover {
+	color: #404040;
+	background-color: Silver;
+	border: 4px solid #404040;
+	
+}
+
+/* Information */
+.information {
+	display: inline-flex;
+	background-color: WhiteSmoke;
+	width: 100%;
+	
+}
+.main-photo {
+	padding: 1.5rem 1rem;
+	width: 60%;
+	display: block;
+}
+.main-photo img {
+	width: 100%;
+	height: auto;
+}
+.main-photo h2 {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+.main-photo span {
+	font-size: 0.8rem;
+	width: 90%;
+}
+.main-photo .label {
+	font-size: 0.7rem;
+	font-weight: bold;
+	padding-top: 2rem;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	padding-top: 1rem;
+	
+}
+.info .subject {
+	display: inline-flex;
+}
+.subject .photo {
+	width: 35%;
+	display: block;
+	padding: 0.5rem;
+}
+.subject img {
+	width: 100%;
+	height: auto;
+}
+.subject .text {
+	display: flex;
+	flex-direction: column;
+	width: 65%;
+}
+.info .text h3 {
+	font-size: 1rem;
+	width: 90%;
+}	
+.info .text span {
+	font-size: 0.8rem;
+	width: 90%;
+}
+.info .text a {
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: Blue;
+	border: 2px solid GhostWhite;
+	border-radius: 4px;
+	line-height: 1.5rem;
+}
+.info .text a:hover {
+	background-color: #404040;
+	color: GhostWhite;
+	border: 2px solid #404040;
+	border-radius: 4px;
+}
+
+/* Course */
+.course-catalog {
+	background-color: Silver;
+	width: 100%;
+	padding: 0 3rem;
+}
+.course {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
+}
+.heading h2 {
+	font-size: 1.5rem;
+	display: block;
+	text-align: center;
+	line-height: 1.5rem;
+	
+}
+.course-name {
+	width: 30%;
+	background-color: WhiteSmoke;
+	margin-bottom: 1rem;
+}
+.course-name .text {
+	padding: 0 0.6rem 0.6rem 0.6rem;
+}
+.course-name .text span {
+	font-size: 0.8rem;
+}
+.course img {
+	width: 100%;
+	height: auto;
+}
+.course h3 {
+	font-size: 1rem;
+	line-height: 0.8rem;
+	
+}
+.course h4 {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	line-height: 0.4rem;
+}
+
+/* Thesis */
+.thesis {
+	width: 100%;
+	background-color: WhiteSmoke;
+	
+	
+}
+.urban {
+	display: inline-flex;
+	width: 100%;
+	
+}
+.video {
+	width: 60%;
+	padding: 0 1rem 1rem 1rem;
+	display: block;
+	border: 2px solid blue;
+}
+.video video {
+	width: 100%;
+	height: auto;
+	border: 2px solid red;
+}
+
+.thesis .subject {
+	display: inline-flex;
+	border: 2px solid green;
+	
+}
+.sidebar {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid yellow;
+}
+.subject {
+	width: 100%;
+	
+}
+.subject .photo {
+	width: 35%;
+	padding: .6rem;
+}
+.subject .photo img {
+	width: 100%;
+	height: auto;
+	
+}
+.subject .text {
+	width: 65%;
+    justify-content: center;	
+	border: 2px solid black;
+	align-items: center;
+}
+.subject .text h3 {
+	font-size: 1rem;
+	width: 90%;
+}	
+.subject .text span {
+	font-size: 0.8rem;
+	width: 90%;
+}
+
+/* Footer */
