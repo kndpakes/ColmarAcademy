@@ -2,39 +2,40 @@ html {
 	
 	font-family: 'Alegreya Sans', sans-serif;
 	font-size: 24px;
-	color: #404040
+	color: #333333
 }
+/* -------------------------------------------------------------------------------------------------*/
 /*I don't like the way the full size screen shrinks, so I made intermediate sizes with smaller text */
 @media only screen and (min-width:501px) and (max-width:700px) {
-html {
-font-size: 16px;
-}
-}
+html {font-size: 16px;}}
 @media only screen and (min-width:701px) and (max-width:850px) {
-html {
-   font-size: 20px;
-}
-}
+html {font-size: 20px;}}
+/* -------------------------------------------------------------------------------------------------*/
 body {
 	margin: 0;
 	padding: 0;
 }
-
+/*
 .container {
 	display: flex;
 	flex-direction: column;
-}
-/* Header */
+	width: 100%;
+	margin: 0;
+	padding: 0;
+*/
+
+/* -------------------- Header -------------------- */
 
 header {
 	display: flex;
 	align-items: center;
 	height: 2.5rem;
-	
 	background-color: WhiteSmoke;
 	position: fixed;
 	z-index: 1;
 	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 .logo {
 	flex-grow: 1;
@@ -42,14 +43,13 @@ header {
 	align-items: center;
 	font-family: 'Cabin Condensed', sans-serif;
 	margin-left: .5rem;
-	
 }
 .logo img {
 	height: 2rem; /* 32px looks too small compared to wireframe */
 	padding-top: 0.5rem;
 }
 .colmar {
-	color: #404040;
+	color: #333333;
 	font-weight: 700;
 }
 .academy {
@@ -65,32 +65,26 @@ nav.desktop {
 nav.desktop li {
 	display: inline-block;
     align-items: center;
-	
 }
 nav.desktop li a {
 	text-decoration: none;
-	color: #404040;
+	color: #333333;
 	padding: .2rem;
 	border: 2px solid WhiteSmoke;
 	border-radius: 6px;
 }
 nav.desktop li a:hover {
 	color: 	WhiteSmoke;
-	background-color: #404040;
+	background-color: #333333;
 }
 nav.mobile {
     list-style: none;
-	
     justify-content: center;
     align-content: center;
     margin-right: 1.5rem;
-    
-
-   
 }
 nav.mobile li {
 	display: inline-block; 
-    
 }
 nav.mobile li a {
     display: flex;
@@ -99,31 +93,27 @@ nav.mobile li a {
     padding:  0 0.2rem;
     height: 1.5rem;
     width: auto;
-
-    
 }
 nav.mobile li a:hover {
     background-color: silver;
     opacity: 50%;
 }
+/* ----- header media queries ----- */
+
 @media only screen and (max-width:500px) {
-nav.desktop {
-    display: none;
-}
-.logo {
-	display: none;
-}
+nav.desktop {display: none;}
+.logo {display: none;}
 header {
     justify-content: center;
     height: 2rem;
+	max-width: 500px;
 }
 }
 @media only screen and (min-width:501px) {
-nav.mobile {
-		display: none;
-	}
+nav.mobile {display: none;}
 }
-/* Banner */
+/* -------------------- Banner -------------------- */
+
 .banner {
 	background-color: Silver;
 	display: inline-flex;
@@ -136,7 +126,6 @@ nav.mobile {
 	width: 60%;
 	display: block;
 }
-
 .banner-photo img {
 	width: 100%;
 	height: auto;
@@ -145,26 +134,21 @@ nav.mobile {
 	width: 40%;
 	display: flex;
 	flex-direction: column;
-    
-
 }
 .start h1 {
 	font-size: 2rem;
 	width: 90%;
     margin: 0;
-
-
 }
 .start h3 {
 	font-size: 1rem;
 	width: 90%;
-
 }
 .btn {
 	width: 75%;
 	font-size: 1rem;
-	background-color: #404040;
-	border: 4px solid #404040;
+	background-color: #333333;
+	border: 4px solid #333333;
 	color: Silver;
 	display: inline-block;
 	justify-content: center;
@@ -177,17 +161,16 @@ nav.mobile {
 	justify-content: center;
 }
 .btn:hover {
-	color: #404040;
+	color: #333333;
 	background-color: Silver;
-	border: 4px solid #404040;
-	
+	border: 4px solid #333333;
 }
+/* ----- banner media queries ----- */
+
 @media only screen and (max-width:500px) {
-	
 .banner {
     display: flex;
     flex-direction: column;
-
 }
 .banner-photo {
 	padding: 0 0;
@@ -198,43 +181,33 @@ nav.mobile {
     width: 100%;
     align-content: center;
     justify-content: center;
-  
-   
-
 }
 .banner .start h1 {
 	font-size: 1.5rem;
 	width: 90%;
-padding: 0 1rem;
-line-height: 1.5rem;
-
-margin: 0;
+    padding: 0 1rem;
+    line-height: 1.5rem;
+    margin: 0;
 }
 .banner .start h3 {
 	font-size: 1rem;
 	width: 90%;
-padding: 0 1rem;
-
-margin: 0.5rem 0;
+    padding: 0 1rem;
+    margin: 0.5rem 0;
 }
 .btn {
 	width: auto;
 	font-size: 1rem;
 	line-height: 1.5;
-margin: 0 1rem;
-
-
-	
+    margin: 0 1rem;
 }
 }
+/* -------------------- Information -------------------- */
 
-
-/* Information */
 .information {
 	display: inline-flex;
 	background-color: WhiteSmoke;
 	width: 100%;
-	
 }
 .main-photo {
 	padding: 1.5rem 1rem;
@@ -259,14 +232,11 @@ margin: 0 1rem;
 	font-weight: bold;
 	padding-top: 2rem;
 }
-
 .info {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
 	padding-top: 1rem;
-
-	
 }
 .info .subject1 {
 	display: inline-flex;
@@ -289,9 +259,7 @@ margin: 0 1rem;
 	flex-direction: column;
 	width: 65%;
 	align-content: center;
-	
 }
-
 .info .text h3 {
 	font-size: 1rem;
 	width: 90%;
@@ -307,18 +275,20 @@ margin: 0 1rem;
 	font-size: 0.8rem;
 	text-decoration: none;
 	color: Blue;
-	border: 2px solid GhostWhite;
+	border: 2px solid WhiteSmoke;
+	background-color: WhiteSmoke;
 	border-radius: 4px;
 	line-height: 1.5rem;
     margin: 0.8rem 0 0 -4px;
 }
-
 .info .text a:hover {
-	background-color: #404040;
+	background-color: #333333;
 	color: GhostWhite;
-	border: 2px solid #404040;
+	border: 2px solid #333333;
 	border-radius: 4px;
 }
+/* ----- information media queries ----- */
+
 @media only screen and (max-width:500px){
 .main-photo {
 display: none;
@@ -330,15 +300,16 @@ width: 100%;
     display: flex;
     flex-direction: column;
     width: 100%;
- 
 }
 .subject1 .text {
     width: 90%;
     padding: 0 0 0.8rem 1rem;
-    
 }
 .subject1 .photo {
     display: none;
+}
+.info .subject1:hover {
+    background-color: #d9d9d9;
 }
 }
 @media only screen and (min-width:501px){
@@ -346,14 +317,14 @@ width: 100%;
     display: none;
 }
 }
-/* Course */
+/* -------------------- Courses -------------------- */
+
 .course-catalog {
 	display: flex;
 	flex-direction: column;
 	background-color: Silver;
 	width: 100%;
 	align-items: center;
-	
 }
 .course {
 	display: flex;
@@ -362,7 +333,6 @@ width: 100%;
 	width: 90%;
 	justify-content: space-around;
 	padding: 1rem;
-		
 }
 .course-name .photo img {
     width: 100%;
@@ -373,24 +343,19 @@ width: 100%;
 	display: block;
 	text-align: center;
 	line-height: 1.5rem;
-	
-	
 }
 .course-name {
 	width: 30%;
 	background-color: WhiteSmoke;
 	margin-bottom: 1rem;
-	
 }
 .course-name:hover {
-    background-color: silver; 
+    background-color: #d9d9d9; 
 }
 
 .course-name .text {
 	padding: 0 0.6rem 0.6rem 0.6rem;
     margin: 0.2rem 0 0 0;
-    
-		
 }
 .course-name h4, span {
   
@@ -399,58 +364,51 @@ width: 100%;
 	font-size: 1rem;
 	line-height: 0.8rem;
     text-decoration: none;
-    color: #404040;
+    color: #333333;
+	background-color: WhiteSmoke;
     font-weight: bold;
     border: 4px solid WhiteSmoke;
     border-radius: 4px;
     margin: 1rem 0 0 -4px;
-    
-	}
+ }
  .course .text a:hover {
 	color: WhiteSmoke;
-    background-color: #404040;
-    border: 4px solid #404040;
+    background-color: #333333;
+    border: 4px solid #333333;
     border-radius: 4px;
 }   
-}
 .course-name .text span {
 	font-size: 0.8rem;
-	
     margin: 0;
 }
 course img {
 	width: 100%;
 	height: auto;
-		
 }
 .course h3 {
 	font-size: 1rem;
 	line-height: 0.8rem;
-	
-	
 }
 .course h4 {
 	font-size: 0.8rem;
 	text-transform: uppercase;
 	line-height: 0.8rem;
 	margin: 0.4rem 0 0.2rem 0;
-	
 }
+/* ----- course media queries ----- */
+
 @media only screen and (max-width:500px){
 .course-catalog {
     width: 100%;
     background-color: WhiteSmoke;
-
 }
 .course {
     display: flex;
     flex-direction: column;
     width: 90%;
-
 }
 .course-name {
     width: 100%;
-
     display: none;
 }
 .course-name img {
@@ -460,7 +418,7 @@ course img {
 }
 .mobile-course1 a, .mobile-course2 a, .mobile-course3 a,
 .mobile-course4 a, .mobile-course5 a, .mobile-course6 a {
-	color: #404040;
+	color: #333333;
 	background-color: silver;
 	width: 100%;
 	height: 3rem;
@@ -469,8 +427,8 @@ course img {
 	align-items: center;
 	padding-left: 1rem;
 	margin: 0.2rem;
-	transition: height .3s linear .1s;
-	transition: font-size .3s linear .1s;
+	transition: height 1s ease-in .1s;
+	transition: font-size 1s ease-in .1s;
 }
 .mobile-course1 a:hover {
 	background-image: url("../images/course-software.jpg");
@@ -479,7 +437,6 @@ course img {
 	font-weight:bold;
 	font-size: 2rem;
 	align-items: flex-end;
-	
 }
 .mobile-course2 a:hover {
 	background-image: url("../images/course-computer-art.jpg");
@@ -525,33 +482,25 @@ course img {
 .mobile-course1 a, .mobile-course2 a, .mobile-course3 a,
 .mobile-course4 a, .mobile-course5 a, .mobile-course6 a {
 	display: none;
-	
-	
 }
-/* Thesis */
+/* -------------------- Thesis -------------------- */
 .thesis {
 	width: 100%;
 	background-color: WhiteSmoke;
-	
-	
 }
 .urban {
 	display: inline-flex;
 	width: 100%;
-	
 }
 .video {
 	width: 60%;
 	padding: 0 1rem 1rem 1rem;
 	display: block;
-	
 }
 .video video {
 	width: 100%;
 	height: auto;
-
 }
-
 .thesis .subject2 {
 	display: inline-flex;
 	border: 1px solid Silver;
@@ -565,28 +514,25 @@ course img {
 	text-decoration: none;
 	color: Blue;
 	border: 2px solid GhostWhite;
+	background-color: GhostWhite;
 	border-radius: 4px;
 	line-height: 1.5rem;
     margin: 0.8rem 0 0 -4px;
 }
-
 .subject2 .text a:hover {
-	background-color: #404040;
+	background-color: #333333;
 	color: GhostWhite;
-	border: 4px solid #404040;
+	border: 4px solid #333333;
 	border-radius: 4px;
 }
 .sidebar {
 	width: 40%;
 	display: flex;
 	flex-direction: column;
-	
-
 }
 .subject2 {
 	width: 100%;
     align-content: center;
-
 }
 .subject2 .photo {
 	width: 35%;
@@ -600,7 +546,6 @@ course img {
 	display: flex;
 	flex-direction: column;
 	width: 65%;
-    
     margin: 0;
 }
 .subject2 .text h3 {
@@ -608,25 +553,35 @@ course img {
 	width: 90%;
     margin: 0;
     padding: 1rem 0 0.8rem 0;
-    
 }	
 .subject2 .text span {
 	font-size: 0.8rem;
 	width: 90%;
     margin: 0;
 }
+/* ----- thesis media queries ----- */
 @media only screen and (max-width:500px){
+	
 .sidebar {
     display: none;
 }
 .urban {
-    justify-content: center;
+	display: flex;
+	width: 100%;
 }
 .video {
-    width: 100%;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	overflow: hidden;
+}
+.video video {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 }
-/* Footer */
+/* -------------------- Footer -------------------- */
 footer {
 	display: flex;
 	align-items: center;
@@ -646,21 +601,19 @@ footer {
 }
 .links li {
 	display: inline-block;
-	
 }
 .links li a {
 	text-decoration: none;
-	color: #404040;
+	color: #333333;
 	padding-right: .2rem;
-	
-	
 }
 .links li a:hover {
 	color: 	WhiteSmoke;
-	background-color: #404040;
-	border: 2px solid #404040;
+	background-color: #333333;
+	border: 2px solid #333333;
 	border-radius: 6px;
 }
+/* ----- footer media queries ----- */
 @media only screen and (max-width:500px){
 footer .links {
     display: none;
