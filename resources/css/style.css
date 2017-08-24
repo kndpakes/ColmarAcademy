@@ -523,7 +523,13 @@ display: none;
 	font-size: 2rem;
 	align-items: flex-end;
 }
-
+@media only screen and (min-width:501px){
+.mobile-course1 a, .mobile-course2 a, .mobile-course3 a,
+.mobile-course4 a, .mobile-course5 a, .mobile-course6 a {
+	display: none;
+	
+	
+}
 /* Thesis */
 .thesis {
 	width: 100%;
