@@ -15,15 +15,6 @@ body {
 	margin: 0;
 	padding: 0;
 }
-/*
-.container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-*/
-
 /* -------------------- Header -------------------- */
 
 header {
@@ -290,12 +281,8 @@ nav.mobile {display: none;}
 /* ----- information media queries ----- */
 
 @media only screen and (max-width:500px){
-.main-photo {
-display: none;
-}
-.info {
-width: 100%;
-}
+.main-photo {display: none;}
+.info {width: 100%;}
 .info .subject1 {
     display: flex;
     flex-direction: column;
@@ -305,17 +292,13 @@ width: 100%;
     width: 90%;
     padding: 0 0 0.8rem 1rem;
 }
-.subject1 .photo {
-    display: none;
-}
+.subject1 .photo {display: none;}
 .info .subject1:hover {
     background-color: #d9d9d9;
 }
 }
 @media only screen and (min-width:501px){
-.subject1 .photo-mobile {
-    display: none;
-}
+.subject1 .photo-mobile {display: none;}
 }
 /* -------------------- Courses -------------------- */
 
@@ -615,7 +598,5 @@ footer {
 }
 /* ----- footer media queries ----- */
 @media only screen and (max-width:500px){
-footer .links {
-    display: none;
-}
+footer .links {display: none;}
 }
