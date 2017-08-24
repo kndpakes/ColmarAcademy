@@ -15,6 +15,10 @@ html {
    font-size: 20px;
 }
 }
+body {
+	margin: 0;
+	padding: 0;
+}
 
 .container {
 	display: flex;
@@ -26,14 +30,18 @@ header {
 	display: flex;
 	align-items: center;
 	height: 2.5rem;
-	padding: 0 1rem;
+	
 	background-color: WhiteSmoke;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
 }
 .logo {
 	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	font-family: 'Cabin Condensed', sans-serif;
+	margin-left: .5rem;
 	
 }
 .logo img {
@@ -52,6 +60,7 @@ nav {
 }
 nav.desktop {
 	justify-content: flex-end;
+	margin-right: 0.5rem;
 }
 nav.desktop li {
 	display: inline-block;
@@ -122,6 +131,7 @@ nav.mobile {
 	display: inline-flex;
 	align-items: center;
 	width: 100%;
+	padding-top: 2rem;
 }
 .banner-photo {
 	padding: 1.5rem 1rem;
@@ -365,6 +375,7 @@ width: 100%;
 	display: block;
 	text-align: center;
 	line-height: 1.5rem;
+	
 	border: 2px solid orange;
 }
 .course-name {
@@ -384,7 +395,7 @@ width: 100%;
 		border: 2px solid orange;
 }
 .course-name h4, span {
-    margin-left: 4px;
+  
 }
 .course .text a {
 	font-size: 1rem;
@@ -442,11 +453,75 @@ border: 2px solid red;
 .course-name {
     width: 100%;
 border: 2px solid purple;
+display: none;
 }
 .course-name img {
     width: 100%;
     height: auto;
 }
+}
+.mobile-course1 a, .mobile-course2 a, .mobile-course3 a,
+.mobile-course4 a, .mobile-course5 a, .mobile-course6 a {
+	color: #404040;
+	background-color: silver;
+	width: 100%;
+	height: 3rem;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	margin: 0.2rem;
+	transition: height .3s linear .1s;
+	transition: font-size .3s linear .1s;
+}
+.mobile-course1 a:hover {
+	background-image: url("../images/course-software.jpg");
+	height: 272px;
+	color: white;
+	font-weight:bold;
+	font-size: 2rem;
+	align-items: flex-end;
+	
+}
+.mobile-course2 a:hover {
+	background-image: url("../images/course-computer-art.jpg");
+	height: 272px;
+	color: white;
+	font-weight:bold;
+	font-size: 2rem;
+	align-items: flex-end;
+}
+.mobile-course3 a:hover {
+	background-image: url("../images/course-design.jpg");
+	height: 272px;
+	color: white;
+	font-weight:bold;
+	font-size: 2rem;
+	align-items: flex-end;
+}
+.mobile-course4 a:hover {
+	background-image: url("../images/course-data.jpg");
+	height: 272px;
+	color: white;
+	font-weight:bold;
+	font-size: 2rem;
+	align-items: flex-end;
+}
+.mobile-course5 a:hover {
+	background-image: url("../images/course-business.jpg");
+	height: 272px;
+	color: white;
+	font-weight:bold;
+	font-size: 2rem;
+	align-items: flex-end;
+}
+.mobile-course6 a:hover {
+	background-image: url("../images/course-marketing.jpg");
+	height: 272px;
+	color: white;
+	font-weight:bold;
+	font-size: 2rem;
+	align-items: flex-end;
 }
 
 /* Thesis */
