@@ -29,8 +29,6 @@ header {
 	padding: 0;
 	margin: 0;
 	border-bottom: 1px solid #333333;
-	/*border: 2px solid red;*/
-	
 }
 .logo {
 	flex-grow: 1;
@@ -40,7 +38,7 @@ header {
 	margin-left: .5rem;
 }
 .logo img {
-	height: 2rem; /* 32px looks too small compared to wireframe */
+	height: 2rem; 
 	padding-top: 0.5rem;
 }
 .colmar {
@@ -96,17 +94,22 @@ nav.mobile li a:hover {
 /* ----- header media queries ----- */
 
 @media only screen and (max-width:500px) {
-nav.desktop {display: none;}
-.logo {display: none;}
+nav.desktop {
+	display: none;
+}
+.logo {
+	display: none;
+}
 header {
     justify-content: space-around;
     height: 2rem;
 	width:100%;
-	/*max-width: 500px;*/
 }
 }
 @media only screen and (min-width:501px) {
-nav.mobile {display: none;}
+nav.mobile {
+	display: none;
+}
 }
 /* -------------------- Banner -------------------- */
 
@@ -156,7 +159,6 @@ nav.mobile {display: none;}
 	border-radius: 6px;
 	text-align: center;
 }
-
 .btn a:hover {
 	color: #333333;
 	background-color: #cccccc;
@@ -297,8 +299,12 @@ width: 95%;
 /* ----- information media queries ----- */
 
 @media only screen and (max-width:500px){
-.main-photo {display: none;}
-.info {width: 100%;}
+.main-photo {
+	display: none;
+}
+.info {
+	width: 100%;
+}
 .info .subject1 {
     display: flex;
     flex-direction: column;
@@ -308,7 +314,9 @@ width: 95%;
     width: 90%;
     padding: 0 0 0.8rem 1rem;
 }
-.subject1 .photo {display: none;}
+.subject1 .photo {
+	display: none;
+}
 .info .subject1:hover {
     background-color: #d9d9d9;
 }
@@ -317,7 +325,9 @@ width: 95%;
 }
 }
 @media only screen and (min-width:501px){
-.subject1 .photo-mobile {display: none;}
+.subject1 .photo-mobile {
+	display: none;
+}
 }
 /* -------------------- Courses -------------------- */
 
@@ -352,11 +362,9 @@ width: 95%;
 	width: 30%;
 	background-color: WhiteSmoke;
 	margin-bottom: 1rem;
-	
 }
 .course-name:hover {
     background-color: #d9d9d9;
-	
 }
 .course-name .text {
 	padding: 0 0.6rem 0.6rem 0.6rem;
@@ -412,7 +420,6 @@ width: 95%;
 .course-name {
     width: 100%;
     display: none;
-}
 }
 .mobile-course1 a, .mobile-course2 a, .mobile-course3 a,
 .mobile-course4 a, .mobile-course5 a, .mobile-course6 a {
@@ -477,6 +484,7 @@ width: 95%;
 	font-weight:bold;
 	font-size: 2rem;
 	align-items: flex-end;
+}
 }
 @media only screen and (min-width:501px){
 .mobile-course1 a, .mobile-course2 a, .mobile-course3 a,
@@ -641,5 +649,7 @@ footer {
 /* ----- footer media queries ----- */
 
 @media only screen and (max-width:500px){
-footer .links {display: none;}
+footer .links {
+	display: none;
+}
 }
